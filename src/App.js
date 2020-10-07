@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import backgroundImage from "./b01.png";
@@ -30,6 +30,27 @@ const App = () => {
     console.log(data);
   };
 
+  const TYPE_COLORS = {
+    normal: "#a8a878",
+    fighting: "#c03028",
+    flying: "#a890f0",
+    poison: "#a040a0",
+    ground: "#e0c069",
+    rock: "#b8a039",
+    bug: "#a8b920",
+    ghost: "#705899",
+    steel: "#b8b8d0",
+    fire: "#f08031",
+    water: "#6890f0",
+    grass: "#78c850",
+    electric: "#f8d030",
+    psychic: "#f95888",
+    ice: "#98d8d8",
+    dragon: "#7138f8",
+    dark: "#715849",
+    fairy: "#ee99ad",
+  };
+
   return (
     <div className="App" style={{ background: `url(${backgroundImage})` }}>
       <div className="header">
@@ -42,7 +63,7 @@ const App = () => {
               placeholder="Search"
               aria-label="Search"
               onChange={handleChange}
-              placeholder="enter pokemon name"
+              placeholder="Enter Pokémon"
             />
           </label>
         </form>
@@ -54,14 +75,36 @@ const App = () => {
             className="card"
             style={{ background: `url(${backgroundImage})` }}
           >
-            <div className="name">
+            <div
+              className="name"
+              style={{ borderColor: `${TYPE_COLORS[data.types[0].type.name]}` }}
+            >
               #{data.id}. {data.species.name.toUpperCase()}
             </div>
 
-            <div className="container">
+            <div
+              className="container"
+              style={{
+                backgroundColor: `${TYPE_COLORS[data.types[0].type.name]}`,
+              }}
+            >
               <div className="row">
                 <div className="col-sm">
-                  <img src={data.sprites["front_default"]} />
+                  <div className="portrait">
+                    <img src={data.sprites["front_default"]} /> <br></br>
+                    {data.types.map((type) => (
+                      <span
+                        key={type.type.name}
+                        className="badge"
+                        style={{
+                          backgroundColor: `${TYPE_COLORS[type.type.name]}`,
+                          color: "white",
+                        }}
+                      >
+                        {type.type.name}
+                      </span>
+                    ))}
+                  </div>
                 </div>
 
                 <div className="col-sm">
