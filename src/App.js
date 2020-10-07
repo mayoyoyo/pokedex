@@ -236,8 +236,19 @@ const App = () => {
                     <div className="divTableCell"> {data.weight / 10}kg</div>
                   </div>
                   <div className="divTableRow">
-                    <div className="divTableCell">HEIGHT:</div>
-                    <div className="divTableCell"> {data.height * 10}cm</div>
+                    <div className="divTableCell">BASE EXP:</div>
+                    <div className="divTableCell"> {data.base_experience}</div>
+                  </div>
+                  <div className="divTableRow">
+                    <div className="divTableCell">ABILITIES:</div>
+                    <div className="divTableCell">
+                      {" "}
+                      {data.abilities.map((ability) => (
+                        <span>
+                          {ability.ability.name} <br></br>
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
