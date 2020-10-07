@@ -93,7 +93,7 @@ const App = () => {
               className="form-control"
               type="text"
               onChange={handleChange}
-              placeholder="Enter Pokémon"
+              placeholder="Search Pokémon"
             />
           </label>
         </form>
@@ -248,26 +248,26 @@ const App = () => {
                 <div className="col-sm">
                   <div className="roundedBox">
                     <div className="tableRow">
-                      <div className="tableCell">HEIGHT:</div>
+                      <div className="tableCell">HEIGHT</div>
                       <div className="tableCell"> {data.height * 10}cm</div>
                     </div>
                     <div className="tableRow">
-                      <div className="tableCell">WEIGHT:</div>
+                      <div className="tableCell">WEIGHT</div>
                       <div className="tableCell"> {data.weight / 10}kg</div>
                     </div>
                     <div className="tableRow">
-                      <div className="tableCell2"> BASE EXP:</div>
+                      <div className="tableCell2"> BASE EXP</div>
                       <div className="tableCell"> {data.base_experience}</div>
                     </div>
                     <div className="tableRow">
-                      <div className="tableCell2">ABILITIES:</div>
+                      <div className="tableCell2">ABILITIES</div>
                       <div className="tableCell2">
                         {" "}
                         {
                           // map for all abilities
                           data.abilities.map((ability) => (
                             <span>
-                              {ability.ability.name} <br></br>
+                              ·{ability.ability.name} <br></br>
                             </span>
                           ))
                         }
@@ -280,6 +280,27 @@ const App = () => {
           </div>
         );
       })}
+      <div className="card" style={{ background: `url(${backgroundImage})` }}>
+        {" "}
+        <div className="credits">
+          <div className="col-sm">Developed by Hanson Kang </div>
+          <div className="col-sm">
+            Powered by{" "}
+            <a href="https://reactjs.org/" target="_blank">
+              React
+            </a>{" "}
+            and{" "}
+            <a href="https://pokeapi.co/" target="_blank">
+              PokéAPI
+            </a>
+          </div>
+          <div className="col-sm">
+            <a href="https://github.com/mayoyoyo/pokedex" target="_blank">
+              Source code
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

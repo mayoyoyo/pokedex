@@ -37,15 +37,31 @@
 .container {
   border-radius: 25px;
   display: flex;
-  background-color: whitesmoke;
+  background-color: white;
   justify-content: center;
   margin-top: 1em;
   padding: 2em;
 }
 
+.credits {
+  border-radius: 25px;
+  display: flex;
+  background-color: whitesmoke;
+  justify-content: center;
+  width: 70%;
+  margin: auto;
+  margin-top: 6em;
+  padding: 2em;
+}
+
 .header {
-  background-color: #ffff33;
+  background-color: whitesmoke;
   overflow: hidden;
+}
+
+.lines {
+  height: 100%;
+  width: 100%;
 }
 
 .logo {
@@ -53,7 +69,8 @@
   max-width: 80%;
   margin-left: 40px;
   margin-right: 40px;
-  margin-bottom: 1em;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .name {
@@ -66,6 +83,10 @@
   padding: 0.3em;
 }
 
+.progress {
+  width: 12em;
+}
+
 .roundedBox {
   border-radius: 25px;
   border-style: solid;
@@ -74,10 +95,6 @@
   height: 100%;
   margin: 0 auto;
   padding: 0.3em;
-}
-
-.progress {
-  width: 15em;
 }
 
 .row {
