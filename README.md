@@ -1,4 +1,4 @@
-# POKEDEX
+# Pokédex
 
 ---
 
