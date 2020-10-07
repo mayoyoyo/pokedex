@@ -16,6 +16,24 @@ const App = () => {
     getPokemon();
   };
 
+  const getRandom = async () => {
+    const dataArray = [];
+    try {
+      const countUrl = "https://pokeapi.co/api/v2/pokemon-species/?limit=0";
+      const countResponse = await axios.get(countUrl);
+      const count = countResponse.data.count;
+      const index = Math.floor(Math.random() * count) + 1;
+      const url = `https://pokeapi.co/api/v2/pokemon/${index}`;
+      const response = await axios.get(url);
+      dataArray.push(response.data);
+      setData(dataArray);
+    } catch (error) {
+      console.log(error);
+    }
+
+    console.log(data);
+  };
+
   const getPokemon = async () => {
     const dataArray = [];
     try {
@@ -54,14 +72,15 @@ const App = () => {
   return (
     <div className="App" style={{ background: `url(${backgroundImage})` }}>
       <div className="header">
+        <button type="button" className="btn-primary" onClick={getRandom}>
+          Random Pokémon!
+        </button>
         <img className="logo" src="https://i.ibb.co/Vq98tN8/logo.png" />
         <form className="searchbar" onSubmit={handleSubmit}>
           <label>
             <input
               className="form-control"
               type="text"
-              placeholder="Search"
-              aria-label="Search"
               onChange={handleChange}
               placeholder="Enter Pokémon"
             />
@@ -91,7 +110,8 @@ const App = () => {
               <div className="row">
                 <div className="col-sm">
                   <div className="portrait">
-                    <img src={data.sprites["front_default"]} /> <br></br>
+                    <img id="sprite" src={data.sprites["front_default"]} />
+                    <br></br>
                     {data.types.map((type) => (
                       <span
                         key={type.type.name}
@@ -119,9 +139,6 @@ const App = () => {
                           style={{
                             width: `${data.stats[0].base_stat}%`,
                           }}
-                          aria-valuenow="25"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
                         >
                           <small>{data.stats[0].base_stat}</small>
                         </div>
@@ -139,9 +156,6 @@ const App = () => {
                           style={{
                             width: `${data.stats[1].base_stat}%`,
                           }}
-                          aria-valuenow="25"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
                         >
                           <small>{data.stats[1].base_stat}</small>
                         </div>
@@ -159,9 +173,6 @@ const App = () => {
                           style={{
                             width: `${data.stats[2].base_stat}%`,
                           }}
-                          aria-valuenow="25"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
                         >
                           <small>{data.stats[2].base_stat}</small>
                         </div>
@@ -178,9 +189,6 @@ const App = () => {
                           style={{
                             width: `${data.stats[3].base_stat}%`,
                           }}
-                          aria-valuenow="25"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
                         >
                           <small>{data.stats[3].base_stat}</small>
                         </div>
@@ -197,9 +205,6 @@ const App = () => {
                           style={{
                             width: `${data.stats[4].base_stat}%`,
                           }}
-                          aria-valuenow="25"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
                         >
                           <small>{data.stats[4].base_stat}</small>
                         </div>
@@ -216,9 +221,6 @@ const App = () => {
                           style={{
                             width: `${data.stats[5].base_stat}%`,
                           }}
-                          aria-valuenow="25"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
                         >
                           <small>{data.stats[5].base_stat}</small>
                         </div>

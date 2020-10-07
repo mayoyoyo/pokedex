@@ -63,18 +63,26 @@ input {
   padding: 0.3em;
 }
 
-.logo {
+.btn-primary {
   float: center;
-  margin-left: 4px;
-  margin-right: 0px;
-  max-width: 80%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  background-color: #3c5aa6;
 }
 
 .searchbar {
   float: right;
+  width: fit-content;
   margin-right: 3em;
-  margin-left: 3em;
   margin-top: 1em;
+}
+
+.logo {
+  float: center;
+  max-width: 80%;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 1em;
 }
 
 .stat {
@@ -89,6 +97,8 @@ input {
 
 .col-sm {
   justify-content: center;
+  overflow: auto;
+  padding: 2%;
 }
 
 .divTable {
