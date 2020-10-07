@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
+#grid {
+  overflow: scroll;
+}
+
 * {
   font-family: "Press Start 2P";
 }
@@ -62,33 +66,30 @@ input {
   margin-top: 1em;
 }
 
-.sprite {
-  height: 16em;
-}
-
 .stat {
   width: 33%;
   margin-right: 10%;
   padding: 1em;
 }
 
-.statsCell {
-  width: 30%;
-  height: 50%;
-  margin-right: 10%;
-  padding: 1em;
-  background-color: white;
+.row {
+  width: 100%;
+}
+
+.col-sm {
+  justify-content: center;
 }
 
 .divTable {
-  display: table;
-  max-width: 20em;
+  display: table-responsive;
+  width: 80%;
   float: right;
   display: flex;
   align-items: center;
 }
 .divTableRow {
   display: table-row;
+  width: fit-content;
 }
 .divTableHeading {
   background-color: #eee;
@@ -96,26 +97,9 @@ input {
 }
 .divTableCell,
 .divTableHead {
-  border: 1px solid #999999;
   display: table-cell;
+  width: fit-content;
   padding: 3px 10px;
-}
-.divTableHeading {
-  background-color: #eee;
-  display: table-header-group;
-  font-weight: bold;
-}
-.divTableFoot {
-  background-color: #eee;
-  display: table-footer-group;
-  font-weight: bold;
-}
-.divTableBody {
-  display: table-row-group;
-}
-
-.divTableCell:nth-child(odd) {
-  background-color: gainsboro;
 }
 
 .container {
@@ -123,4 +107,10 @@ input {
   opacity: 0.9;
   background-color: whitesmoke;
   justify-content: center;
+  margin-top: 1em;
+  padding: 1em;
+}
+
+.progress {
+  width: 19em;
 }

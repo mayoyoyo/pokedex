@@ -57,156 +57,144 @@ const App = () => {
             <div className="name">
               #{data.id}. {data.species.name.toUpperCase()}
             </div>
-            <div className="imageCell" key="sprite.id">
-              <img className="sprite" src={data.sprites["front_default"]} />
-            </div>
-            <div className="statsCell">
-              <div className="row align-items-center">
-                <div className={`col-12 col-md-9`}>HP</div>
-                <div className={`col-12 col-md-9`}>
-                  <div className="progress">
-                    <div
-                      className="progress-bar "
-                      role="progressbar"
-                      style={{
-                        width: `${data.stats[0].base_stat}%`,
-                      }}
-                      aria-valuenow="25"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      <small>{data.stats[0].base_stat}</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="row align-items-center">
-                <div className={`col-12 col-md-9`}>Attack</div>
-                <div className={`col-12 col-md-9`}>
-                  <div className="progress">
-                    <div
-                      className="progress-bar "
-                      role="progressbar"
-                      style={{
-                        width: `${data.stats[1].base_stat}%`,
-                      }}
-                      aria-valuenow="25"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      <small>{data.stats[1].base_stat}</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="row align-items-center">
-                <div className={`col-12 col-md-9`}>Defense</div>
-                <div className={`col-12 col-md-9`}>
-                  <div className="progress">
-                    <div
-                      className="progress-bar "
-                      role="progressbar"
-                      style={{
-                        width: `${data.stats[2].base_stat}%`,
-                      }}
-                      aria-valuenow="25"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      <small>{data.stats[2].base_stat}</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="row align-items-center">
-                <div className={`col-12 col-md-9`}>Special Attack</div>
-                <div className={`col-12 col-md-9`}>
-                  <div className="progress">
-                    <div
-                      className="progress-bar "
-                      role="progressbar"
-                      style={{
-                        width: `${data.stats[3].base_stat}%`,
-                      }}
-                      aria-valuenow="25"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      <small>{data.stats[3].base_stat}</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="row align-items-center">
-                <div className={`col-12 col-md-9`}>Special Defense</div>
-                <div className={`col-12 col-md-9`}>
-                  <div className="progress">
-                    <div
-                      className="progress-bar "
-                      role="progressbar"
-                      style={{
-                        width: `${data.stats[4].base_stat}%`,
-                      }}
-                      aria-valuenow="25"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      <small>{data.stats[4].base_stat}</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="row align-items-center">
-                <div className={`col-12 col-md-9`}>Speed</div>
-                <div className={`col-12 col-md-9`}>
-                  <div className="progress">
-                    <div
-                      className="progress-bar "
-                      role="progressbar"
-                      style={{
-                        width: `${data.stats[5].base_stat}%`,
-                      }}
-                      aria-valuenow="25"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      <small>{data.stats[5].base_stat}</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="stat">type: {data.types[0].type.name}</div>
-              <div className="stat">height: {data.height * 10}cm</div>
-              <div className="stat">weight: {data.weight / 10}kg</div>
-            </div>
 
             <div className="container">
-              <img src={data.sprites["front_default"]} />
-              <div className="divTable">
-                <div className="divTableBody">
+              <div className="row">
+                <div className="col-sm">
+                  <img src={data.sprites["front_default"]} />
+                </div>
+
+                <div className="col-sm">
                   <div className="divTableRow">
-                    <div className="divTableCell">Type</div>{" "}
-                    {Math.round(data.height * 3.9)}"
-                  </div>
-                  <div className="divTableRow">
-                    <div className="divTableCell">Height</div>
+                    <div className="divTableCell">HP</div>
                     <div className="divTableCell">
                       {" "}
-                      {Math.round(data.height * 3.9)}"
+                      <div className="progress">
+                        <div
+                          className="progress-bar"
+                          role="progressbar"
+                          style={{
+                            width: `${data.stats[0].base_stat}%`,
+                          }}
+                          aria-valuenow="25"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          <small>{data.stats[0].base_stat}</small>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div className="divTableRow">
-                    <div className="divTableCell">Weight</div>
+                    <div className="divTableCell">ATT</div>
                     <div className="divTableCell">
                       {" "}
-                      {Math.round(data.weight / 4.3)} lbs
+                      <div className="progress">
+                        <div
+                          className="progress-bar"
+                          role="progressbar"
+                          style={{
+                            width: `${data.stats[1].base_stat}%`,
+                          }}
+                          aria-valuenow="25"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          <small>{data.stats[1].base_stat}</small>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div className="divTableRow">
-                    <div className="divTableCell">Number of Battles</div>
+                    <div className="divTableCell">DEF</div>
                     <div className="divTableCell">
-                      {data.game_indices.length}
+                      {" "}
+                      <div className="progress">
+                        <div
+                          className="progress-bar"
+                          role="progressbar"
+                          style={{
+                            width: `${data.stats[2].base_stat}%`,
+                          }}
+                          aria-valuenow="25"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          <small>{data.stats[2].base_stat}</small>
+                        </div>
+                      </div>
                     </div>
+                  </div>
+                  <div className="divTableRow">
+                    <div className="divTableCell">S.ATT</div>
+                    <div className="divTableCell">
+                      <div className="progress">
+                        <div
+                          className="progress-bar"
+                          role="progressbar"
+                          style={{
+                            width: `${data.stats[3].base_stat}%`,
+                          }}
+                          aria-valuenow="25"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          <small>{data.stats[3].base_stat}</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="divTableRow">
+                    <div className="divTableCell">S.DEF</div>
+                    <div className="divTableCell">
+                      <div className="progress">
+                        <div
+                          className="progress-bar"
+                          role="progressbar"
+                          style={{
+                            width: `${data.stats[4].base_stat}%`,
+                          }}
+                          aria-valuenow="25"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          <small>{data.stats[4].base_stat}</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="divTableRow">
+                    <div className="divTableCell">SPD</div>
+                    <div className="divTableCell">
+                      <div className="progress">
+                        <div
+                          className="progress-bar"
+                          role="progressbar"
+                          style={{
+                            width: `${data.stats[5].base_stat}%`,
+                          }}
+                          aria-valuenow="25"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          <small>{data.stats[5].base_stat}</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-sm">
+                  <div className="divTableRow">
+                    <div className="divTableCell">HEIGHT:</div>
+                    <div className="divTableCell"> {data.height * 10}cm</div>
+                  </div>
+                  <div className="divTableRow">
+                    <div className="divTableCell">WEIGHT:</div>
+                    <div className="divTableCell"> {data.weight / 10}kg</div>
+                  </div>
+                  <div className="divTableRow">
+                    <div className="divTableCell">HEIGHT:</div>
+                    <div className="divTableCell"> {data.height * 10}cm</div>
                   </div>
                 </div>
               </div>
