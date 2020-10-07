@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "79d393e32d5d6410dc6062491ec8aae2",
+    "revision": "b4f6cb7bbac32e7ffdbd81002c0e84ef",
     "url": "/pokedex/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pokedex/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "d850893b904398de365c",
-    "url": "/pokedex/static/css/main.4bbdc5f1.chunk.css"
+    "revision": "2650c1a76c49dd89e17e",
+    "url": "/pokedex/static/css/main.0283984d.chunk.css"
   },
   {
     "revision": "988f6661007d08133cc1",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pokedex/static/js/2.7c927245.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d850893b904398de365c",
-    "url": "/pokedex/static/js/main.8f7ff91a.chunk.js"
+    "revision": "2650c1a76c49dd89e17e",
+    "url": "/pokedex/static/js/main.51d8f6f5.chunk.js"
   },
   {
     "revision": "5d5b7317cf43a0b8925c",
