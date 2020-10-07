@@ -57,12 +57,15 @@ input {
 
 .logo {
   float: left;
-  margin-left: 5em;
+  margin-left: 4px;
+  margin-right: 0px;
+  max-width: 80%;
 }
 
 .searchbar {
   float: right;
   margin-right: 3em;
+  margin-left: 3em;
   margin-top: 1em;
 }
 
@@ -112,5 +115,5 @@ input {
 }
 
 .progress {
-  width: 19em;
+  width: 15em;
 }
